@@ -5,13 +5,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+/**
+ * Created by jt on 2019-04-21.
+ */
 @Service
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
     @Override
-    public CustomerDto getCustomerById(UUID id) {
+    public CustomerDto getCustomerById(UUID customerId) {
         return CustomerDto.builder()
                 .id(UUID.randomUUID())
-                .name("FirstName")
+                .name("Joe Buck")
                 .build();
     }
 }
